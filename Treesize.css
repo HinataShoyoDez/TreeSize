@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#tree ul {
+    list-style-type: none;
+    padding-left: 20px;
+    position: relative;
+}
+
+#tree ul ul {
+    margin-left: 20px;
+}
+
+#tree li {
+    margin: 5px 0;
+    padding: 5px;
+    position: relative;
+}
+
+.tree-indicator {
+    position: absolute;
+    top: 8px;
+    left: -20px;
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid rgba(0, 0, 0, 0.65);
+}
+
+#tree li {
+    padding-left: 20px; 
+}
+
+#tree ul ul ul .tree-indicator {
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom: 10px solid rgba(0, 0, 0, 0.65);
+}
+
+.toggle {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    text-align: center;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    user-select: none;
+    vertical-align: middle; 
+    line-height: 20px; 
+    font-size: 14px; 
+}
+
+.toggle.open {
+    background-color: #bbb;
+}
+
+.toggle::before {
+    content: '-';
+    color: #333;
+}
+
+.toggleplus::before{
+    content: '-';
+}
+
+.toggle.open::before {
+    content: '+';
+}
+
+.disabled-node {
+    pointer-events: none; 
+    opacity: 0.5; 
+}
